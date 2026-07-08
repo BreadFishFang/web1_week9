@@ -47,15 +47,27 @@ table {
 	border-spacing: 0;
 }
 
+/* clear fix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /****************************************************************************************************
     |  Mobile style
 *****************************************************************************************************/
 .container{
     padding: 0 0.5em;
+    background-color: azure;
     /*you never want anything right up against the edge of the screen, 
     so a small amount of padding on the left and right helps leave a bit of whitespace. */
 }
 
+.large{
+    display: none;
+    /* hide anything with the class large(we'll show it at a larger size */
+}
 /* style the navigation links so they are more like a button, 
 andeasier to click wuith your finger. */
 nav ul a{
@@ -79,6 +91,8 @@ nav ul a:active{
 h1{
     font-size: 30px;
 }
+
+
 
 /*********************************************************************************************
         LARGER SCREENS
@@ -114,10 +128,11 @@ h1{
     }
 }
 
+/*
 @media screen and (min-width:768px){
-    /* the CSS in this media query will only apply to your site when the size of the screen is 768px wide or greater - 
+     the CSS in this media query will only apply to your site when the size of the screen is 768px wide or greater - 
     since this is after the 600px media query,
-    styles inside here will override it */
+    styles inside here will override it 
     body{
         background-color: rgb(44, 90, 101);
     }
@@ -126,6 +141,53 @@ h1{
         max-width: 800px;
         margin: 0 auto;
         background-color: azure;
+         this will center the container div in the browser window when the screen is wider than 800px. *    
+    }
+
+    }
+*/
+
+@media screen and (min-width:968px){
+    /* the CSS in this media query will only apply to your site when the size of the screen is 768px wide or greater - 
+    since this is after the 600px media query,
+    styles inside here will override it */
+    body{
+        background-color: rgb(44, 90, 101);
+    }
+    .container{
+        width:100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: azure;
         /* this will center the container div in the browser window when the screen is wider than 800px. */
+    }
+
+    /* switch to a more horizontal layout for the larger size*/
+    main{
+        width:75%;
+        float:left;
+    }
+
+    aside{
+        width:25%;
+        float:left;
+    }
+    footer{
+        clear: both;
+        /* this tells the footer to see the floated elements and go below them */
+    }
+
+    .small{
+        display: none;
+    }
+    .large{
+        display: inline-block;
+        /* show the larger image (use inline-block becayse thisis the default behaviour for an image */
+    }
+    img{
+        width:50%;
+        float: left;
+        /* floating an image make the text wrap around it */
+        margin-right: 1em;
     }
 }
