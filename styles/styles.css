@@ -59,7 +59,7 @@ table {
 /* style the navigation links so they are more like a button, 
 andeasier to click wuith your finger. */
 nav ul a{
-    background-color: #867373;
+    background-color: #d4f8ff;
     display:block;
     /* make them block elements so they can have width and height */
     width:100%;
@@ -70,10 +70,10 @@ nav ul a{
     border-top:1px solid rgb(169, 231, 255);
     border-bottom:1px solid rgb(169, 231, 255);
     text-decoration: none;
-    color:azure;
+    color:rgb(21, 115, 115);
 }
 nav ul a:active{
-    background-color: rgb(205, 255, 255);
+    background-color: rgb(79, 131, 142);
 }
 
 h1{
