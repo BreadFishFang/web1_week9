@@ -60,6 +60,8 @@ table {
 andeasier to click wuith your finger. */
 nav ul a{
     background-color: #867373;
+    display:block;
+    /* make them block elements so they can have width and height */
     width:100%;
 }
 
