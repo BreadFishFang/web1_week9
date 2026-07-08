@@ -48,5 +48,21 @@ table {
 }
 
 /****************************************************************************************************
-    |  My style
+    |  Mobile style
 *****************************************************************************************************/
+.container{
+    padding: 0 0.5em;
+    /*you never want anything right up against the edge of the screen, 
+    so a small amount of padding on the left and right helps leave a bit of whitespace. */
+}
+
+/* style the navigation links so they are more like a button, 
+andeasier to click wuith your finger. */
+nav ul a{
+    background-color: #867373;
+    width:100%;
+}
+
+h1{
+    font-size: 30px;
+}
