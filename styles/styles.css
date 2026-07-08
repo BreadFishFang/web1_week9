@@ -63,6 +63,17 @@ nav ul a{
     display:block;
     /* make them block elements so they can have width and height */
     width:100%;
+    /* the em unit is relative to the font size of the element, so it will scale with the text size. 
+    the default font size is 16px, so 2em is 32px. */
+    height: 2em;
+    text-align: center;
+    border-top:1px solid rgb(169, 231, 255);
+    border-bottom:1px solid rgb(169, 231, 255);
+    text-decoration: none;
+    color:azure;
+}
+nav ul a:active{
+    background-color: rgb(205, 255, 255);
 }
 
 h1{
